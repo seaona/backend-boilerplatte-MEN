@@ -1,0 +1,33 @@
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+    "email": "test1@test.com",
+    "username": "user1231",
+    "password": "abcd"
+}
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test1@test.com",
+    "password": "abcd"
+}
+###
+
+POST http://localhost:8080/api/users/:id/messages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjc2YmVmMDVlZTI4MTY1MDM5ZjQ5ZiIsInVzZXJuYW1lIjoidXNlcjEyMzEiLCJpYXQiOjE2MDU4NTYzMTR9.u7j9nnUqS4YA0ZM2-TKhebonuuz3tU5ZFO5-9fRlQpM
+
+Content-Type: application/json
+
+{
+    "text": "fsdfsdgsdg fdsfsdf dsf dsfg",
+    "id": "5fb76bef05ee28165039f49f"
+}
+###
+
+GET http://localhost:8080/api/messages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjI5NTFkNjY4MmNiNTk1OGI0MzFhZCIsInVzZXJuYW1lIjoidXNlcjEyMyIsImlhdCI6MTYwNTUzOTgwNn0._sKSbjV-l0_TDjibRMG3vtyT6KdCS6krmal4VZlJu0o
+###
